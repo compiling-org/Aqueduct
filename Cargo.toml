@@ -1,0 +1,27 @@
+[package]
+name = "aqueduct"
+version = "0.1.0"
+edition = "2021"
+description = "Rust implementation of Open Media Transport (OMT)"
+authors = ["Aqueduct Contributors"]
+license = "MIT"
+
+[dependencies]
+tokio = { version = "1.36", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde-xml-rs = "0.6" # OMT uses XML for metadata
+bytes = "1.5"
+thiserror = "1.0"
+log = "0.4"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+# mdns-sd or astro-dnssd for discovery. mdns-sd is pure rust.
+mdns-sd = "0.10"
+uuid = { version = "1.7", features = ["v4"] }
+byteorder = "1.5"
+socket2 = "0.5" # For advanced socket configuration if needed
+env_logger = "0.11"
+lz4_flex = "0.12.0"
+xcap = "0.0.14"
+image = "0.24"
+minifb = "0.25"
